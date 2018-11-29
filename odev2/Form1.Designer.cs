@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.başlatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sıcaklıkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,16 +50,12 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // başlatToolStripMenuItem
             // 
             this.başlatToolStripMenuItem.Name = "başlatToolStripMenuItem";
             this.başlatToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.başlatToolStripMenuItem.Text = "başlat";
+            this.başlatToolStripMenuItem.Click += new System.EventHandler(this.başlatToolStripMenuItem_Click);
             // 
             // sıcaklıkToolStripMenuItem
             // 
@@ -73,6 +70,16 @@
             this.nemToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.nemToolStripMenuItem.Text = "Nem";
             this.nemToolStripMenuItem.Click += new System.EventHandler(this.nemToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -98,6 +105,7 @@
         private System.Windows.Forms.ToolStripMenuItem başlatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sıcaklıkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nemToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

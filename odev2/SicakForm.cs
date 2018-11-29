@@ -15,11 +15,20 @@ namespace odev2
         public Sıcaklık()
         {
             InitializeComponent();
+            
         }
 
         private void Sıcaklık_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Form1.sicakList.Count; i++)
+            {
+                listBox1.Items.Add(Form1.sicakList[i]);
+            }
         }
     }
 }
