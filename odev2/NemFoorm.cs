@@ -25,6 +25,8 @@ namespace odev2
             {
                 listBox1.Items.Add(Form1.nemList[i]);
             }
+            chart1.DataSource = Form1.nemList;
+            chart1.Series[0].Points.DataBindXY(Form1.timelist, Form1.nemList);
 
         }
 
@@ -34,6 +36,11 @@ namespace odev2
             {
                 listBox1.Items.Add(Form1.nemList[Form1.nemList.Count - 1]);
                 count = Form1.nemList.Count;
+                chart1.Series[0].Points.DataBindXY(Form1.timelist, Form1.nemList);
+                label1.Text = "Ortalama : " + Form1.nemList.Average();
+                label2.Text = "Max : " + Form1.nemList.Max();
+                label3.Text = "Min : " + Form1.nemList.Min();
+
             }
 
         }

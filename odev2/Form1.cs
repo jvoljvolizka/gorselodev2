@@ -15,10 +15,10 @@ namespace odev2
 
     public partial class Form1 : Form
     {
-        
+        bool tswitch = false;
         public static List<int> nemList = new List<int>();
         public static List<int> sicakList = new List<int>();
-        
+        public static List<string> timelist = new List<string>();
         Random rnd = new Random();
 
         public Form1()
@@ -45,6 +45,7 @@ namespace odev2
         {   
             sicakList.Add(rnd.Next(10, 20));
             nemList.Add(rnd.Next(0, 100));
+            timelist.Add(DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"));
             
         }
 
@@ -54,5 +55,9 @@ namespace odev2
             timer1.Enabled = true;
         }
 
+        private void durdurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+        }
     }
 }

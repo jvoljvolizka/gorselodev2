@@ -35,6 +35,7 @@
             this.nemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.durdurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.başlatToolStripMenuItem,
             this.sıcaklıkToolStripMenuItem,
-            this.nemToolStripMenuItem});
+            this.nemToolStripMenuItem,
+            this.durdurToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -81,6 +83,13 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // durdurToolStripMenuItem
+            // 
+            this.durdurToolStripMenuItem.Name = "durdurToolStripMenuItem";
+            this.durdurToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.durdurToolStripMenuItem.Text = "durdur";
+            this.durdurToolStripMenuItem.Click += new System.EventHandler(this.durdurToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,7 +99,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Odev2";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,6 +115,7 @@
         private System.Windows.Forms.ToolStripMenuItem sıcaklıkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nemToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem durdurToolStripMenuItem;
     }
 }
 

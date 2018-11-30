@@ -25,6 +25,8 @@ namespace odev2
             for (int i = 0; i < Form1.sicakList.Count; i++)
             {
                 listBox1.Items.Add(Form1.sicakList[i]);
+                chart1.DataSource = Form1.sicakList;
+                chart1.Series[0].Points.DataBindXY(Form1.timelist, Form1.sicakList);
             }
 
         }
@@ -35,6 +37,10 @@ namespace odev2
             {
                 listBox1.Items.Add(Form1.sicakList[Form1.sicakList.Count - 1]);
                 count = Form1.sicakList.Count;
+                chart1.Series[0].Points.DataBindXY(Form1.timelist, Form1.sicakList);
+                label1.Text = "Ortalama : " + Form1.sicakList.Average();
+                label2.Text = "Max : " + Form1.sicakList.Max();
+                label3.Text = "Min : " + Form1.sicakList.Min();
             }
 
         }
