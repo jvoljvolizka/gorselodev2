@@ -12,6 +12,7 @@ namespace odev2
 {
     public partial class Sıcaklık : Form
     {
+        int count;
         public Sıcaklık()
         {
             InitializeComponent();
@@ -20,15 +21,22 @@ namespace odev2
 
         private void Sıcaklık_Load(object sender, EventArgs e)
         {
+            count = Form1.sicakList.Count;
+            for (int i = 0; i < Form1.sicakList.Count; i++)
+            {
+                listBox1.Items.Add(Form1.sicakList[i]);
+            }
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < Form1.sicakList.Count; i++)
+            if (count != Form1.sicakList.Count)
             {
-                listBox1.Items.Add(Form1.sicakList[i]);
+                listBox1.Items.Add(Form1.sicakList[Form1.sicakList.Count - 1]);
+                count = Form1.sicakList.Count;
             }
+
         }
     }
 }

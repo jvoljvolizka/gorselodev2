@@ -20,7 +20,7 @@ namespace odev2
         public static List<int> sicakList = new List<int>();
         
         Random rnd = new Random();
-        bool basbool = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -43,16 +43,14 @@ namespace odev2
 
         private void timer1_Tick(object sender, EventArgs e)
         {   
-            if (basbool == true)
-            {
-                sicakList.Add(rnd.Next(10, 20));
-                nemList.Add(rnd.Next(0, 100));
-            }
+            sicakList.Add(rnd.Next(10, 20));
+            nemList.Add(rnd.Next(0, 100));
+            
         }
 
         private void başlatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            basbool = true;
+           
             timer1.Enabled = true;
         }
 

@@ -95,6 +95,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // NemForm
             // 
@@ -108,6 +109,7 @@
             this.Controls.Add(this.chart1);
             this.Name = "NemForm";
             this.Text = "Nem";
+            this.Load += new System.EventHandler(this.NemForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
